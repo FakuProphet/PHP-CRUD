@@ -13,7 +13,8 @@
   <body>
     <h1 class="row justify-content-center">HOLA SOY FACUNDO</h1>
     <br>
-    
+    <!-- require_once va a verificar si el archivo ha sido importado, sino lo importa-->
+    <?php require_once 'proceso.php'; ?>
     <div class="row justify-content-center">
     <form action="" method="POST">
         <div class="form-group">
