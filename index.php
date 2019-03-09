@@ -11,8 +11,9 @@
     <title>CRUD EN PHP</title>
   </head>
   <body>
-    <h1>HOLA SOY FACUNDO</h1>
-
+    <h1 class="row justify-content-center">HOLA SOY FACUNDO</h1>
+    <br>
+    
     <div class="row justify-content-center">
     <form action="" method="POST">
         <div class="form-group">
@@ -24,7 +25,7 @@
             <input type="text" name="ubicacion" class="form-control" value="Ingrese su ubicación">
         </div>
             <div class="form-group">
-            <button type="submit" value="Grabar">Grabar</button> 
+                <button type="submit" class="btn btn-primary" value="Grabar">Grabar</button> 
         </div> 
     </form>
     </div>  
