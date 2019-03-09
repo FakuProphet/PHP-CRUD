@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +16,7 @@
     <!-- require_once va a verificar si el archivo ha sido importado, sino lo importa-->
     <?php require_once 'proceso.php'; ?>
     <div class="row justify-content-center">
-    <form action="" method="POST">
+    <form action="proceso.php" method="POST">
         <div class="form-group">
             <label>Nombre</label>
             <input type="text" name="nombre" class="form-control" value="Ingrese su nombre">
