@@ -15,6 +15,30 @@
     <br>
     <!-- require_once va a verificar si el archivo ha sido importado, sino lo importa-->
     <?php require_once 'proceso.php'; ?>
+    
+    <?php 
+        $mysqli = new mysqli('localhost','root','','usuariosTest') or die(mysqli_errno($mysqli));
+        $consulta = $mysqli->query("Select * from registros") or die($mysqli->error);
+      /*  pre_r($consulta->fetch_assoc());*/
+      /*  pre_r($consulta->fetch_assoc());*/
+      /*
+       * Retorna una matriz de strings asociativa que representa a la fila obtenida del resultset, 
+       *donde cada llave de la matriz corresponde al nombre de una de las columnas de éste; 
+       * o NULL si es que no le quedan filas
+       * 
+       */
+    ?>
+    
+    
+    
+    <?php
+    function pre_r($array){
+        echo '<pre>';
+        print_r($array); /*permite visualizar la informacion de una variable*/
+        echo '</pre>';
+    }
+    ?>
+    
     <div class="row justify-content-center">
     <form action="proceso.php" method="POST">
         <div class="form-group">
