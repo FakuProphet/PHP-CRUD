@@ -21,7 +21,7 @@
     <div class="alert alert-<?=$_SESSION['msg_type']?>">
     <?php
         echo $_SESSION['mensaje'];
-        unset($_SESSION['mensaje']);
+        unset($_SESSION['mensaje']);/*destruye las variables especificadas*/
     ?>
     </div>
     
