@@ -18,7 +18,8 @@
     
     <?php if(isset($_SESSION['mensaje'])): ?>
     
-    <div class="alert alert-<?=$_SESSION['msg_type']?>">
+    <div class="alert alert-<?=$_SESSION['msg_type']?>">/*le concatena a el tipo de mensaje el resultado 
+                                                        de del msg_type devuelto por el metodo*/
     <?php
         echo $_SESSION['mensaje'];
         unset($_SESSION['mensaje']);/*destruye las variables especificadas*/
