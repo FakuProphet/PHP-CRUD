@@ -24,6 +24,7 @@
         echo $_SESSION['mensaje'];
         unset($_SESSION['mensaje']);/*destruye las variables especificadas*/
     ?>
+                                                        
     </div>
     
     <?php endif;?>
