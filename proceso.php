@@ -15,3 +15,10 @@ $ubicacion = $_POST['ubicacion'];
 $mysqly->query("INSERT INTO registros (nombre,procedencia) VALUES ('$nombre','$ubicacion')")
         or die($mysqly->error);
 }
+
+if(isset($_GET['eliminar'])){
+    $nroReg = $_GET['eliminar'];
+    $mysqly->query("Delete from registros where nro=$nroReg") 
+            or die($mysqly->error());
+    
+}
