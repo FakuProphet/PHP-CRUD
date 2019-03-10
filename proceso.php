@@ -21,6 +21,7 @@ header("location: index.php");
 
 }
 
+/*isset()  Determina si una variable está definida y no es NULL*/
 if(isset($_GET['eliminar'])){
     $nroReg = $_GET['eliminar'];
     $mysqly->query("Delete from registros where nro=$nroReg") 
