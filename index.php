@@ -43,6 +43,12 @@
                 <tr>
                     <td><?php echo $fila['nombre']; ?></td>
                     <td><?php echo $fila['procedencia']; ?></td>
+                    <td>
+                        <a href="index.php?editar=<?php echo $fila['nro'];?>" 
+                           class="btn btn-info">Editar</a>
+                        <a href="proceso.php?eliminar=<?php echo $fila['nro'];?>" 
+                           class="btn btn-danger">Eliminar</a>
+                    </td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
