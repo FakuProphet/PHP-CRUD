@@ -26,7 +26,7 @@
             <input type="text" name="ubicacion" class="form-control" value="Ingrese su ubicación">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary" value="Grabar">Grabar</button> 
+            <button type="submit" class="btn btn-primary" name="guardar" value="Grabar">Grabar</button> 
         </div> 
     </form>
     </div>  
