@@ -15,6 +15,22 @@
     <br>
     <!-- require_once va a verificar si el archivo ha sido importado, sino lo importa-->
     <?php require_once 'proceso.php'; ?>
+    
+    <?php if(isset($_SESSION['mensaje'])): ?>
+    
+    <div class="alert alert-<?=$_SESSION['msg_type']?>">
+    <?php
+        echo $_SESSION['mensaje'];
+        unset($_SESSION['mensaje']);
+    ?>
+    </div>
+    
+    <?php endif;?>
+           
+       
+   
+    
+    
     <div class="container">
     <?php 
         $mysqli = new mysqli('localhost','root','','usuariosTest') or die(mysqli_errno($mysqli));
