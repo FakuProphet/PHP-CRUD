@@ -15,7 +15,7 @@
     <br>
     <!-- require_once va a verificar si el archivo ha sido importado, sino lo importa-->
     <?php require_once 'proceso.php'; ?>
-    
+    <div class="container">
     <?php 
         $mysqli = new mysqli('localhost','root','','usuariosTest') or die(mysqli_errno($mysqli));
         $consulta = $mysqli->query("Select * from registros") or die($mysqli->error);
@@ -29,6 +29,25 @@
        */
     ?>
     
+    <div class="row justify-content-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Ubicación</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+               <?php while ( $fila = $consulta->fetch_assoc()): ?>
+                <tr>
+                    <td><?php echo $fila['nombre']; ?></td>
+                    <td><?php echo $fila['procedencia']; ?></td>
+                </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+    </div>
     
     
     <?php
@@ -53,7 +72,8 @@
             <button type="submit" class="btn btn-primary" name="guardar" value="Grabar">Grabar</button> 
         </div> 
     </form>
-    </div>  
+    </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
