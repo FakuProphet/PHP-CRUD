@@ -15,7 +15,7 @@
     <br>
     <!-- require_once va a verificar si el archivo ha sido importado, sino lo importa-->
     <?php require_once 'proceso.php'; ?>
-    
+     <div class="container">
     <?php if(isset($_SESSION['mensaje'])): ?>
     
     <div class="alert alert-<?=$_SESSION['msg_type']?>"><!--le concatena a el tipo de mensaje el resultado 
@@ -33,7 +33,7 @@
    
     
     
-    <div class="container">
+   
     <?php 
         $mysqli = new mysqli('localhost','root','','usuariosTest') or die(mysqli_errno($mysqli));
         $consulta = $mysqli->query("Select * from registros") or die($mysqli->error);
@@ -97,10 +97,8 @@
         </div>
         <div class="form-group">
             
-            <?php 
-                if($update==true): 
-            ?>
-                <button type="submit" class="btn btn-info" name="actualizar">Actualizar</button>
+            <?php if($update==true): ?>
+                <button type="submit" class="btn btn-info" name="update">Actualizar</button>
             <?php else: ?>
                 <button type="submit" class="btn btn-primary" name="guardar">Grabar</button> 
             <?php endif; ?>
