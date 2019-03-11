@@ -18,8 +18,8 @@
     
     <?php if(isset($_SESSION['mensaje'])): ?>
     
-    <div class="alert alert-<?=$_SESSION['msg_type']?>">/*le concatena a el tipo de mensaje el resultado 
-                                                        de del msg_type devuelto por el metodo*/
+    <div class="alert alert-<?=$_SESSION['msg_type']?>"><!--le concatena a el tipo de mensaje el resultado 
+                                                        de del msg_type devuelto por el metodo-->
     <?php
         echo $_SESSION['mensaje'];
         unset($_SESSION['mensaje']);/*destruye las variables especificadas*/
@@ -84,16 +84,27 @@
     
     <div class="row justify-content-center">
     <form action="proceso.php" method="POST">
+        <input type="hidden" name="nro" value="<?php echo $nro; ?>">
         <div class="form-group">
             <label>Nombre</label>
-            <input type="text" name="nombre" class="form-control" value="Ingrese su nombre">
+            <input type="text" name="nombre" class="form-control" 
+                   value="<?php echo $nombre;?>" placeholder="Ingrese el nombre" >
         </div>
         <div class="form-group">
             <label>Ubicación</label>
-            <input type="text" name="ubicacion" class="form-control" value="Ingrese su ubicación">
+            <input type="text" name="ubicacion" class="form-control" 
+                   value="<?php echo $ubicacion;?>" placeholder="Ingrese la ubicación" >
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary" name="guardar" value="Grabar">Grabar</button> 
+            
+            <?php 
+                if($update==true): 
+            ?>
+                <button type="submit" class="btn btn-info" name="actualizar">Actualizar</button>
+            <?php else: ?>
+                <button type="submit" class="btn btn-primary" name="guardar">Grabar</button> 
+            <?php endif; ?>
+                
         </div> 
     </form>
     </div>
