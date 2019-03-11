@@ -10,7 +10,7 @@ session_start();
 $mysqly = new mysqli('localhost','root','','usuariosTest') or die(mysqli_error($mysqly));
 
 
-$nro = 0;
+$n = 0;
 $update = false;
 $nombre = '';
 $ubicacion = '';
@@ -33,11 +33,11 @@ header("location: index.php");
 
 
  if(isset($_POST['update'])){
- $nro = $_POST['nro'];
+ $n = $_POST['n'];
  $nombre = $_POST['nombre'];
  $ubicacion = $_POST['ubicacion'];
  
- $mysqly->query("UPDATE registros SET nombre='$nombre', procedencia='$ubicacion' WHERE nro=$nro") 
+ $mysqly->query("UPDATE registros SET nombre='$nombre', procedencia='$ubicacion' WHERE nro=$n") 
         or die($mysqly->error);
  $_SESSION['mensaje'] = "Se actualizó correctamente el registro.";
  $_SESSION['msg_type'] = "warning";
@@ -61,9 +61,9 @@ header("location: index.php");
 }
 
 if (isset($_GET['editar'])){
-    $nro = $_GET['editar'];
+    $n = $_GET['editar'];
     $update = true;
-    $resultado = $mysqly->query("Select * from registros where nro=$nro")
+    $resultado = $mysqly->query("Select * from registros where nro=$n")
                  or die($mysqly->error);
     
     if(count($resultado)==1){

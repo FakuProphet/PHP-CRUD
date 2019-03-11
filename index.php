@@ -84,7 +84,7 @@
     
     <div class="row justify-content-center">
     <form action="proceso.php" method="POST">
-        <input type="hidden" name="nro" value="<?php echo $nro; ?>">
+        <input type="hidden" name="n" value="<?php echo $n; ?>">
         <div class="form-group">
             <label>Nombre</label>
             <input type="text" name="nombre" class="form-control" 
